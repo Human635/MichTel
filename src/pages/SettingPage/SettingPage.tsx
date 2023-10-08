@@ -1,8 +1,8 @@
 import React from "react";
-import { HeaderSettings } from "../../components/SettingPage/Header";
+import { Settings } from "../../components/SettingPage/Header&MainSide";
 
 export const SettingPage = () => {
     return(
-        <HeaderSettings/>
+        <Settings/>
     )
 }
