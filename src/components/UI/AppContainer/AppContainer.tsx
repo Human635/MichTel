@@ -9,7 +9,7 @@ export const AppContainerLogin = ({ children, ...props }: ContainerProps) => {
   return (
     <ThemecontainerLogin className="container" {...props}>
       <ThemeBackImg
-        src="https://fons.pibig.info/uploads/posts/2023-05/thumbs/1685397032_fons-pibig-info-p-besshovnie-foni-vkontakte-65.jpg"
+        src="https://i.pinimg.com/originals/de/1d/df/de1ddf9ee30e08e15460626b919ef87e.jpg"
         alt="BackgroundImg"
       />
       {children}

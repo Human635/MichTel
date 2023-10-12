@@ -15,6 +15,7 @@ import { ThemeProvider } from "styled-components";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { theme } from "./theme/theme";
 import { SettingPage } from "./pages/SettingPage/SettingPage";
+import { MainPage } from "./pages/MainPage/MainPage";
 
 const App: React.FC = () => {
   const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const App: React.FC = () => {
     {
       path: "/setting",
       element: <SettingPage />,
+    },
+    {
+      path: "/main",
+      element: <MainPage />,
     },
   ]);
 

@@ -5,10 +5,12 @@ import { ThemeAppLink } from './AppLink.style'
 interface AppLinkProps {
     to: string
     value: string
+    className?: string
+    children?: React.ReactNode;
 }
 
-export const AppLink = ({to, value, ...props}: AppLinkProps) => {
+export const AppLink = ({to, className, children, value, ...props}: AppLinkProps) => {
     return(
-        <ThemeAppLink href={to} {...props}>{value}</ThemeAppLink>
+        <ThemeAppLink className={className} href={to} {...props}>{value} {children}</ThemeAppLink>
     )
 }

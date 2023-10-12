@@ -6,8 +6,8 @@ export const ThemecontainerLogin = styled.div`
 `;
 
 export const ThemeBackImg = styled.img`
-  z-index: -2;
-  position: absolute;
+  z-index: -70;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
