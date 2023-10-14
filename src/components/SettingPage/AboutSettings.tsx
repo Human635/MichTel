@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeHeaderSocial, ThemeSettingAbout } from "./SettingsStyles.style";
+import { ThemeHeaderSocial, ThemeSettingAbout, ThemeToogle } from "./SettingsStyles.style";
 import { Bio } from "./Bio/Bio";
 import { AppButton } from "../UI/AppButton/AppButton";
 
@@ -48,10 +48,11 @@ export const AboutSettings = () => {
         </div>
       </ThemeHeaderSocial>
       <Bio className="Bio" />
-      <div className="dark-light">
+      <ThemeToogle className="dark-light">
         <h3>Light-Dark <span>Theme Exchange</span></h3>
-        <i className="bi bi-brightness-high-fill" id="toggleDark"></i>
-      </div>
+        <input type="checkbox" id="toggle" />
+        <label htmlFor="toggle"></label>
+      </ThemeToogle>
       <AppButton className="ReChange" type={() => {}} value="Редактировать" />
     </ThemeSettingAbout>
   );

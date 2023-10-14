@@ -181,14 +181,56 @@ export const ThemeSettingAbout = styled.div`
 `;
 
 export const ThemeForBtnStyle = styled.div`
-.goMain{
-  position: absolute;
-  top: 10px;
-  right: 8px;
-  margin: 0 auto;
-  width: 100px;
-  height: 30px;
-  color: white;
-  padding: 0;
-}
-`
+  .goMain {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    margin: 0 auto;
+    width: 100px;
+    height: 30px;
+    color: white;
+    padding: 0;
+  }
+`;
+
+export const ThemeToogle = styled.div`
+  input[type="checkbox"] {
+    visibility: hidden;
+    &:checked + label {
+      transform: rotate(360deg);
+      background-color: #000;
+      &:before {
+        transform: translateX(45px);
+        background-color: #fff;
+      }
+    }
+  }
+
+  label {
+    margin: 0 auto;
+    display: flex;
+    width: 90px;
+    height: 40px;
+    border: 6px solid;
+    border-radius: 50em;
+    position: relative;
+    top: -20px;
+    transition: transform 0.75s ease-in-out;
+    transform-origin: 50% 50%;
+    cursor: pointer;
+
+    &:before {
+      transition: transform 0.75s ease;
+      transition-delay: 0.5s;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      background-color: #000;
+      border-radius: 50%;
+      top: 3px;
+      left: 5px;
+    }
+  }
+`;
