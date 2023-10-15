@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { ThemeHeader, ThemeToogleMain } from "./MainPage.style";
+import { ThemeHeader, ThemeRightSide, ThemeToogleMain } from "./MainPage.style";
 import { AppInput } from "../UI/AppInput/AppInput";
+import FadeMenu from "./Favorites";
 
 export const Header = () => {
   return (
@@ -75,12 +76,20 @@ export const Header = () => {
           </g>
         </svg>
       </div>
-      <AppInput type="search" id="search" name="search" inputPlaceholder="Поиск" />
+      <AppInput
+        type="search"
+        id="search"
+        name="search"
+        inputPlaceholder="Поиск"
+      />
 
-      <ThemeToogleMain className="dark-light">
-        <input type="checkbox" id="toggle" />
-        <label htmlFor="toggle"></label>
-      </ThemeToogleMain>
+      <ThemeRightSide>
+        <FadeMenu />
+        <ThemeToogleMain className="dark-light">
+          <input type="checkbox" id="toggle" />
+          <label htmlFor="toggle"></label>
+        </ThemeToogleMain>
+      </ThemeRightSide>
     </ThemeHeader>
   );
 };

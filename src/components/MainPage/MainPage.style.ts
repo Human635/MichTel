@@ -48,7 +48,7 @@ export const ThemeToogleMain = styled.div`
     border-radius: 50em;
     position: relative;
     top: -10px;
-    left: -80px;
+    left: -100px;
     transition: transform 0.75s ease-in-out;
     transform-origin: 50% 50%;
     cursor: pointer;
@@ -434,4 +434,19 @@ height: 20vw;
   align-items: center;
   font-size: 30px;
 }
+`
+
+export const ThemeRightSide = styled.div`
+display: flex;
+align-items: center;
+gap: -80px;
+`
+
+export const ThemeRightFavorite = styled.div`
+position: absolute;
+top: 30px;
+right: 15px;
+background-color: gray;
+border-radius: 10px;
+opacity: 0.9;
 `
