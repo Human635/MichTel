@@ -1,16 +1,32 @@
 import { Card } from "../../components/MainPage/Card";
 import React from "react";
 import { AppContainerSettings } from "../../components/UI/AppContainer/AppContainerSettings";
-import { Header } from "../../components/MainPage/Header";
+import { Header } from "../../components/FavoritePage/HeaderFav";
+import { ThemeMainSection } from "../../components/MainPage/MainPage.style";
 
 export const FavoritesPage = () => {
   return (
     <AppContainerSettings>
       <Header />
-      <div>
-        <h1>Here You can see your favorite places!</h1>
-      </div>
-      <div></div>
+      <ThemeMainSection className="product" id="menu">
+        <div className="place-grid">
+          {/* <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/> */}
+        </div>
+      </ThemeMainSection>
     </AppContainerSettings>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ThemeDivForOneStyle, ThemeHeader, ThemeRightSide, ThemeToogleMain } from "./MainPage.style";
+import { ThemeDivForOneStyle, ThemeHeader, ThemeRightSide, ThemeToogleMain } from "../MainPage/MainPage.style";
 import { AppInput } from "../UI/AppInput/AppInput";
 import { Link } from "react-router-dom";
 import { AppLink } from "../UI/AppLink/AppLink";
@@ -90,7 +90,7 @@ export const Header = () => {
           <label htmlFor="toggle"></label>
         </ThemeToogleMain>
         <ThemeDivForOneStyle>
-          <AppLink to="/favorites" value="Love" />
+          <AppLink to="/main" value="Back" />
         </ThemeDivForOneStyle>
       </ThemeRightSide>
     </ThemeHeader>

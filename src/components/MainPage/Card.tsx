@@ -1,20 +1,21 @@
 import React from "react";
 import { ThemeCard } from "./MainPage.style";
 
-interface TouristCardProps {
-  name?: string;
-  cost_for_nomad_in_usd?: number;
-  image?: string;
+export interface TouristCardProps {
+  name: string;
+  cost_for_nomad_in_usd: number;
+  image: string;
 
-  region?: string;
-  population?: number;
-  air_quality_now?: number;
-  country?: string;
-  internet_speed?: string;
-  safety_level?: number;
-  humidity?: string;
-  wheather_emoji?: string;
-  temperatureC?: string;
+  region: string;
+  population: number;
+  air_quality_now: number;
+  country: string;
+  internet_speed: string;
+  safety_level: number;
+  humidity: string;
+  wheather_emoji: any;
+  wheather_icon: any;
+  temperatureC: string;
 }
 
 export const Card = ({
@@ -31,16 +32,18 @@ export const Card = ({
   humidity,
   wheather_emoji,
   temperatureC,
+  wheather_icon,
 }: TouristCardProps) => {
   return (
     <ThemeCard className="wrapper">
       <div className="container">
-        <div className="top">{image}</div>
+        {/* <div className="top">{image}</div> */}
+        <img className="top" src={image} alt="Image" />
         <div className="bottom">
           <div className="left">
             <div className="details">
               <h1>{name}</h1>
-              <p>{cost_for_nomad_in_usd}</p>
+              <p>{cost_for_nomad_in_usd}$/m</p>
             </div>
             <div className="buy">
               <svg
@@ -126,7 +129,7 @@ export const Card = ({
             </tr>
             <tr>
               <td>{region}</td>
-              <td>{population}</td>
+              <td>{population}p</td>
             </tr>
             <tr>
               <th>AQI</th>
@@ -141,18 +144,19 @@ export const Card = ({
               <th>Safety-5b</th>
             </tr>
             <tr>
-              <td>{internet_speed}</td>
-              <td>{safety_level}</td>
+              <td>{internet_speed}MB/s</td>
+              <td>{safety_level}/5</td>
             </tr>
             <tr>
               <th>Humidity</th>
               <th>Whether</th>
             </tr>
             <tr>
-              <td>{humidity}</td>
+              <td>{humidity}%</td>
               <td>
+                {wheather_icon}
                 {wheather_emoji}
-                {temperatureC}
+                {temperatureC}°C
               </td>
             </tr>
           </table>

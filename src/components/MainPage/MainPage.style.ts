@@ -242,7 +242,7 @@ export const ThemeCard = styled.div`
     width: 100%;
     height: 100%;
     .top {
-      height: 80%;
+      height: 60%;
       width: 100%;
       -webkit-background-size: 100%;
       -moz-background-size: 100%;
@@ -414,6 +414,14 @@ export const ThemeMainSection = styled.section`
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
+  h2 {
+    margin-left: 50px;
+    font-size: 40px;
+  }
+  p {
+    margin-left: 52px;
+    font-size: 20px;
+  }
 `;
 
 export const ThemeFooter = styled.footer`
@@ -450,4 +458,10 @@ export const ThemeRightFavorite = styled.div`
   background-color: gray;
   border-radius: 10px;
   opacity: 0.9;
+`;
+export const ThemeDivForOneStyle = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 30px;
 `;

@@ -1,13 +1,13 @@
 import React from "react";
 import { useState, useEffect, useInsertionEffect } from "react";
 import { Card } from "./Card";
-import { useGetPlacesListQuery } from "../../store/api/allCitiesApi";
 import { ThemeMainSection } from "./MainPage.style";
+import { useGetPlacesListQuery } from "../../store/api/placesApi";
 
 export const PlacesSection = () => {
   const { data, isError, isLoading } = useGetPlacesListQuery(null);
 
-  console.log("data", data);
+  console.log("DATA: ", data);
 
   return (
     <ThemeMainSection className="product" id="menu">
@@ -18,28 +18,27 @@ export const PlacesSection = () => {
       </p>
 
       <div className="place-grid">
-        <a href="#">
-          {isError && <h1>ПРОИЗОШЛА ОШИБКА</h1>}
-          {isLoading && <h1>ЗАГРУЗКА...</h1>}
-          {data?.message?.length &&
-            data.message.map((place: any) => (
-              <Card
-                key={place.id}
-                name={place.name}
-                cost_for_nomad_in_usd={place.cost_for_nomad_in_usd}
-                image={place.image}
-                region={place.region}
-                population={place.population}
-                air_quality_now={place.air_quality_now}
-                country={place.country}
-                internet_speed={place.internet_speed}
-                safety_level={place.safety_level}
-                humidity={place.humidity}
-                wheather_emoji={place.wheather_emoji}
-                temperatureC={place.temperatureC}
-              />
-            ))}
-        </a>
+        {isError && <h1>ПРОИЗОШЛА ОШИБКА</h1>}
+        {isLoading && <h1>ЗАГРУЗКА...</h1>}
+        {data &&
+          data.map((places: any) => (
+            <Card
+              key={places.id}
+              name={places.name}
+              cost_for_nomad_in_usd={places.cost_for_nomad_in_usd}
+              image={places.image}
+              region={places.region}
+              population={places.population}
+              air_quality_now={places.air_quality_now}
+              country={places.country}
+              internet_speed={places.internet_speed}
+              safety_level={places.safety_level}
+              humidity={places.humidity}
+              wheather_emoji={places.wheather_emoji}
+              temperatureC={places.temperatureC}
+              wheather_icon={places.wheather_icon}
+            />
+          ))}
       </div>
     </ThemeMainSection>
   );
