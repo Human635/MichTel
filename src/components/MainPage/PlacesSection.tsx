@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useEffect, useInsertionEffect } from "react";
 import { Card } from "./Card";
 import { ThemeMainSection } from "./MainPage.style";
 import { useGetPlacesListQuery } from "../../store/api/placesApi";

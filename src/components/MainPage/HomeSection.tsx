@@ -2,7 +2,6 @@ import React from "react";
 import { ThemeHomeSection } from "./MainPage.style";
 import { AppContainerSettings } from "../UI/AppContainer/AppContainerSettings";
 import { AppButton } from "../UI/AppButton/AppButton";
-import App from "../../App";
 
 export const HomeSection = () => {
   return (

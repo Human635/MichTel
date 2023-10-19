@@ -1,7 +1,11 @@
-import React, { useState } from "react";
-import { ThemeDivForOneStyle, ThemeHeader, ThemeRightSide, ThemeToogleMain } from "./MainPage.style";
+import React from "react";
+import {
+  ThemeDivForOneStyle,
+  ThemeHeader,
+  ThemeRightSide,
+  ThemeToogleMain,
+} from "./MainPage.style";
 import { AppInput } from "../UI/AppInput/AppInput";
-import { Link } from "react-router-dom";
 import { AppLink } from "../UI/AppLink/AppLink";
 
 export const Header = () => {
