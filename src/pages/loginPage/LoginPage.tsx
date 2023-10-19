@@ -3,10 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { AppContainerLogin } from "../../components/UI/AppContainer/AppContainer";
 import { ThemeLogin, ThemeFormLogin } from "./LoginPage.style";
 import { useNavigate } from "react-router-dom";
-import { AppLink } from "../../components/UI/AppLink/AppLink";
 import { RootState } from "../../store/store";
 import { User, changeUser } from "../../store/userSlice";
-import { ThemeAppButtonLogin } from "../../components/UI/AppButtonLogin/AppButtonLogin.style";
 import { AppButtonLogin } from "../../components/UI/AppButtonLogin/AppButtonLogin";
 
 const mockUser: User = {

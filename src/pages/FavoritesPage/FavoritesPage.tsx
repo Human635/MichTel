@@ -9,23 +9,7 @@ export const FavoritesPage = () => {
     <AppContainerSettings>
       <Header />
       <ThemeMainSection className="product" id="menu">
-        <div className="place-grid">
-          {/* <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/> */}
-        </div>
+        <div className="place-grid"></div>
       </ThemeMainSection>
     </AppContainerSettings>
   );
