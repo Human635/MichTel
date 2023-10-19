@@ -1,13 +1,3 @@
-// const App = () => {
-//   return (
-//     <div className="App">
-//       <h1>MichTel</h1>
-//     </div>
-//   );
-// };
-
-// export default App;
-
 import React from "react";
 import { Provider } from "react-redux";
 import { LoginPage } from "./pages/loginPage/LoginPage";
@@ -16,6 +6,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { theme } from "./theme/theme";
 import { SettingPage } from "./pages/SettingPage/SettingPage";
 import { MainPage } from "./pages/MainPage/MainPage";
+import { FavoritesPage } from "./pages/FavoritesPage/FavoritesPage";
+import { store } from "./store/store";
 
 const App: React.FC = () => {
   const router = createBrowserRouter([
@@ -31,12 +23,18 @@ const App: React.FC = () => {
       path: "/main",
       element: <MainPage />,
     },
+    {
+      path: "/favorites",
+      element: <FavoritesPage />,
+    },
   ]);
 
   return (
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </Provider>
   );
 };
 

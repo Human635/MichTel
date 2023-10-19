@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { ThemeHeader, ThemeRightSide, ThemeToogleMain } from "./MainPage.style";
 import { AppInput } from "../UI/AppInput/AppInput";
-import FadeMenu from "./Favorites";
+import { Link } from "react-router-dom";
+import { AppLink } from "../UI/AppLink/AppLink";
 
 export const Header = () => {
   return (
@@ -84,11 +85,11 @@ export const Header = () => {
       />
 
       <ThemeRightSide>
-        <FadeMenu />
         <ThemeToogleMain className="dark-light">
           <input type="checkbox" id="toggle" />
           <label htmlFor="toggle"></label>
         </ThemeToogleMain>
+        <AppLink to="/favorites" value="Love"/>
       </ThemeRightSide>
     </ThemeHeader>
   );

@@ -1,16 +1,46 @@
 import React from "react";
 import { ThemeCard } from "./MainPage.style";
 
-export const Card = () => {
+interface TouristCardProps {
+  name?: string;
+  cost_for_nomad_in_usd?: number;
+  image?: string;
+
+  region?: string;
+  population?: number;
+  air_quality_now?: number;
+  country?: string;
+  internet_speed?: string;
+  safety_level?: number;
+  humidity?: string;
+  wheather_emoji?: string;
+  temperatureC?: string;
+}
+
+export const Card = ({
+  name,
+  cost_for_nomad_in_usd,
+  image,
+
+  region,
+  population,
+  air_quality_now,
+  country,
+  internet_speed,
+  safety_level,
+  humidity,
+  wheather_emoji,
+  temperatureC,
+}: TouristCardProps) => {
   return (
     <ThemeCard className="wrapper">
       <div className="container">
-        <div className="top"></div>
+        <div className="top">{image}</div>
         <div className="bottom">
           <div className="left">
             <div className="details">
-              <h1>Paris</h1>
-              <p>£250/day</p>
+              <h1>{name}</h1>
+              <p>{cost_for_nomad_in_usd}</p>
             </div>
             <div className="buy">
               <svg
@@ -91,36 +121,39 @@ export const Card = () => {
         <div className="contents">
           <table>
             <tr>
-              <th>Width</th>
-              <th>Height</th>
+              <th>Region</th>
+              <th>Population</th>
             </tr>
             <tr>
-              <td>3000mm</td>
-              <td>4000mm</td>
+              <td>{region}</td>
+              <td>{population}</td>
             </tr>
             <tr>
-              <th>Something</th>
-              <th>Something</th>
+              <th>AQI</th>
+              <th>Country</th>
             </tr>
             <tr>
-              <td>200mm</td>
-              <td>200mm</td>
+              <td>{air_quality_now}</td>
+              <td>{country}</td>
             </tr>
             <tr>
-              <th>Something</th>
-              <th>Something</th>
+              <th>Internet</th>
+              <th>Safety-5b</th>
             </tr>
             <tr>
-              <td>200mm</td>
-              <td>200mm</td>
+              <td>{internet_speed}</td>
+              <td>{safety_level}</td>
             </tr>
             <tr>
-              <th>Something</th>
-              <th>Something</th>
+              <th>Humidity</th>
+              <th>Whether</th>
             </tr>
             <tr>
-              <td>200mm</td>
-              <td>200mm</td>
+              <td>{humidity}</td>
+              <td>
+                {wheather_emoji}
+                {temperatureC}
+              </td>
             </tr>
           </table>
         </div>

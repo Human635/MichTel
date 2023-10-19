@@ -1,29 +1,20 @@
 import React from "react";
+
 import { AboutSettings } from "./AboutSettings";
 import {
   ThemeHeaderSettings,
-  ThemeHeaderMain,
   ThemeForBtnStyle,
 } from "./SettingsStyles.style";
 import { AppContainerSettings } from "../UI/AppContainer/AppContainerSettings";
-import { AppButton } from "../UI/AppButton/AppButton";
 import { AppLink } from "../UI/AppLink/AppLink";
+import { HeaderSetting } from "./Header";
 
 export const Settings = () => {
   return (
     <AppContainerSettings>
       <div>
         <ThemeHeaderSettings>
-          <ThemeHeaderMain>
-            <img
-              src="https://st2.depositphotos.com/3585621/11461/v/450/depositphotos_114612520-stock-illustration-camera-flat-icon-on-black.jpg"
-              alt="addPhoto"
-            />
-            <div>
-              <h1>Ilon Mask</h1>
-              <span>@elonmask</span>
-            </div>
-          </ThemeHeaderMain>
+          <HeaderSetting />
           <AboutSettings />
         </ThemeHeaderSettings>
       </div>
