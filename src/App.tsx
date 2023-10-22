@@ -6,7 +6,6 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { theme } from "./theme/theme";
 import { SettingPage } from "./pages/SettingPage/SettingPage";
 import { MainPage } from "./pages/MainPage/MainPage";
-import { FavoritesPage } from "./pages/FavoritesPage/FavoritesPage";
 import { store } from "./store/store";
 
 const App: React.FC = () => {
@@ -22,10 +21,6 @@ const App: React.FC = () => {
     {
       path: "/main",
       element: <MainPage />,
-    },
-    {
-      path: "/favorites",
-      element: <FavoritesPage />,
     },
   ]);
 

@@ -7,6 +7,7 @@ import {
 } from "./MainPage.style";
 import { AppInput } from "../UI/AppInput/AppInput";
 import { AppLink } from "../UI/AppLink/AppLink";
+import { MenuFavorites } from "./MenuofLoves";
 
 export const Header = () => {
   return (
@@ -93,9 +94,7 @@ export const Header = () => {
           <input type="checkbox" id="toggle" />
           <label htmlFor="toggle"></label>
         </ThemeToogleMain>
-        <ThemeDivForOneStyle>
-          <AppLink to="/favorites" value="Love" />
-        </ThemeDivForOneStyle>
+        <MenuFavorites />
       </ThemeRightSide>
     </ThemeHeader>
   );
