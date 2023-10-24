@@ -446,6 +446,9 @@ export const ThemeFooter = styled.footer`
 `;
 
 export const ThemeRightSide = styled.div`
+  position: absolute;
+  right: 40px;
+  top: 15px;
   display: flex;
   align-items: center;
   gap: -80px;
@@ -467,6 +470,33 @@ export const ThemeDivForOneStyle = styled.div`
 `;
 
 export const ThemeMenuFavorites = styled.div`
+  position: absolute;
+  font-family: "Rubik", sans-serif;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    font: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  img,
+  svg,
+  ion-icon,
+  span,
+  button {
+    display: block;
+  }
+
   .navbar-btn-group {
     display: flex;
     align-items: center;
@@ -488,10 +518,10 @@ export const ThemeMenuFavorites = styled.div`
   .shopping-cart-btn .count {
     background: hsl(45, 91%, 58%);
     position: absolute;
-    top: -2px;
+    top: 2px;
     right: -2px;
     height: 20px;
-    min-width: 20px;
+    min-width: 2px;
     display: flex;
     align-items: center;
     padding: 0 7px;
@@ -534,7 +564,7 @@ export const ThemeMenuFavorites = styled.div`
     right: 0;
     max-width: 400px;
     width: 100%;
-    height: calc(100vh - 91px);
+    height: calc(100vh - 95px);
     background: hsla(0, 0%, 100%, 0.9);
     box-shadow: -1px 1px 3px 0 hsla(0, 0%, 0%, 0.05);
     backdrop-filter: blur(10px);
@@ -561,21 +591,21 @@ export const ThemeMenuFavorites = styled.div`
   }
 
   .cart-h4 {
-    color: var(--space-cadet);
+    color: hsl(249, 37%, 19%);
     margin-bottom: 30px;
     font-weight: 600;
   }
 
   .cart-item {
-    background: hsl(249, 37%, 19%);
+    background: hsl(220, 13%, 95%);
     display: flex;
     align-items: center;
     margin-bottom: 30px;
   }
 
   .cart-item .img-box {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     margin-right: 15px;
     overflow: hidden;
   }
@@ -592,8 +622,8 @@ export const ThemeMenuFavorites = styled.div`
   }
 
   .cart-item .product-name {
-    color: var(--space-cadet);
-    font-size: var(--fs-5);
+    color: hsl(249, 37%, 19%);
+    font-size: 14px;
     font-weight: 600;
     width: calc(100% - 135px);
   }
@@ -602,11 +632,12 @@ export const ThemeMenuFavorites = styled.div`
     background: hsl(45, 91%, 58%);
     color: hsl(249, 37%, 19%);
     font-weight: 500;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
   }
 
   .cart-item .product-price .small {

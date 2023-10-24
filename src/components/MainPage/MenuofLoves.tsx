@@ -36,16 +36,10 @@ export const MenuFavorites = () => {
           />
           <span className="count">5</span>
         </button>
-        {/* 
-        <button className="menu-toggle-btn">
-          <span className="line one"></span>
-          <span className="line two"></span>
-          <span className="line three"></span>
-        </button> */}
       </div>
       <div className="cart-box">
         <ul className="cart-box-ul">
-          <h4 className="cart-h4">Your order.</h4>
+          <h4 className="cart-h4">Your favorites</h4>
 
           <li>
             <a href="#" className="cart-item">
