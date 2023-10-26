@@ -37,9 +37,9 @@ export const MenuFavorites = () => {
           <span className="count">5</span>
         </button>
       </div>
-      <div className="cart-box">
+      <div className="cart-box boxBackExchange">
         <ul className="cart-box-ul">
-          <h4 className="cart-h4">Your favorites</h4>
+          <h4 className="cart-h4 mainTitles">Your favorites</h4>
 
           <li>
             <a href="#" className="cart-item">
@@ -102,7 +102,7 @@ export const MenuFavorites = () => {
           </li>
         </ul>
 
-        <div className="cart-btn-group">
+        <div className="cart-btn-group boxBackExchange">
           <button className="btn btn-secondary">View order</button>
           <button className="btn btn-primary">Checkout</button>
         </div>

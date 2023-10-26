@@ -467,8 +467,11 @@ export const ThemeDivForOneStyle = styled.div`
   right: 30px;
 `;
 
+//TODO: Исправить стиль на SVG и подключить к THEmeexchange
 export const ThemeMenuFavorites = styled.div`
   position: absolute;
+  right: 0px;
+  top: 3px;
   font-family: "Rubik", sans-serif;
 
   li {
@@ -503,14 +506,14 @@ export const ThemeMenuFavorites = styled.div`
 
   .shopping-cart-btn {
     position: relative;
-    background: hsl(220, 13%, 95%);
+    background-color: #999;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #fff;
+    border: 2px solid #ccc;
   }
 
   .shopping-cart-btn .count {
@@ -563,7 +566,6 @@ export const ThemeMenuFavorites = styled.div`
     max-width: 400px;
     width: 100%;
     height: calc(100vh - 95px);
-    background: hsla(0, 0%, 100%, 0.9);
     box-shadow: -1px 1px 3px 0 hsla(0, 0%, 0%, 0.05);
     backdrop-filter: blur(10px);
     transform: translateX(100%);
@@ -589,7 +591,6 @@ export const ThemeMenuFavorites = styled.div`
   }
 
   .cart-h4 {
-    color: hsl(249, 37%, 19%);
     margin-bottom: 30px;
     font-weight: 600;
   }
@@ -646,7 +647,6 @@ export const ThemeMenuFavorites = styled.div`
   }
 
   .cart-btn-group {
-    background: #fff;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -686,4 +686,39 @@ export const ThemeMenuFavorites = styled.div`
   }
 `;
 
-export const ThemeLightDark = styled.div``;
+export const ThemeLightDark = styled.div`
+  position: absolute;
+  right: 80px;
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+
+  button {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: gray;
+    transition: 200ms;
+    border: none;
+
+    &:first-of-type {
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    &:hover {
+      background-color: royalblue;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+`;
