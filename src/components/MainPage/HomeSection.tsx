@@ -6,28 +6,30 @@ import { AppButton } from "../UI/AppButton/AppButton";
 export const HomeSection = () => {
   return (
     <AppContainerSettings>
-      <ThemeHomeSection className="home" id="home">
+      <ThemeHomeSection className="home boxBackExchange" id="home">
         <div className="home-left">
           <p className="home-subtext">Hi, new friend!</p>
 
-          <h1 className="main-heading">We don't show, we give emotions!</h1>
+          <h1 className="main-heading mainTitles">
+            We don't show, we give emotions!
+          </h1>
 
-          <p className="home-text">
+          <p className="home-text secondaryText">
             One of the few web-guidebooks that are given for free
           </p>
 
-          <div className="btn-group">
+          <div className="btn-group secondaryText ">
             <AppButton
               type="submit"
               value="Our tutor"
-              className="btn btn-primary btn-icon"
+              className="btn btn-primary btn-icon secondaryText"
             >
               <svg
-                fill="#000000"
                 height="34px"
                 width="30px"
                 version="1.1"
                 id="Layer_1"
+                className="iconTheme"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
                 viewBox="0 0 512 512"
@@ -71,13 +73,13 @@ export const HomeSection = () => {
             <AppButton
               type="submit"
               value="About us"
-              className="btn btn-secondary btn-icon"
+              className="btn btn-secondary btn-icon secondaryText"
             >
               <svg
                 width="34px"
                 height="34px"
                 viewBox="0 0 1024 1024"
-                className=""
+                className="iconTheme"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -87,13 +89,13 @@ export const HomeSection = () => {
                 />
                 <path
                   d="M512.1 64H172v896h680V385.6L512.1 64z m278.8 324.3h-280v-265l280 265zM808 916H216V108h278.6l0.2 0.2v296.2h312.9l0.2 0.2V916z"
-                  fill="#39393A"
+                  className="iconTheme"
                 />
-                <path d="M280.5 530h325.9v16H280.5z" fill="#39393A" />
+                <path d="M280.5 530h325.9v16H280.5z" className="iconTheme" />
                 <path d="M639.5 530h90.2v16h-90.2z" fill="#E73B37" />
-                <path d="M403.5 641.8h277v16h-277z" fill="#39393A" />
+                <path d="M403.5 641.8h277v16h-277z" className="iconTheme" />
                 <path d="M280.6 641.8h91.2v16h-91.2z" fill="#E73B37" />
-                <path d="M279.9 753.7h326.5v16H279.9z" fill="#39393A" />
+                <path d="M279.9 753.7h326.5v16H279.9z" className="iconTheme" />
                 <path d="M655.8 753.7h73.9v16h-73.9z" fill="#E73B37" />
               </svg>
             </AppButton>
@@ -124,7 +126,6 @@ export const HomeSection = () => {
           />
 
           <svg
-            fill="#1C1C1C"
             version="1.1"
             id="Capa_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +134,7 @@ export const HomeSection = () => {
             height="50px"
             viewBox="0 0 190.408 190.407"
             xmlSpace="preserve"
-            className="shape shape-1"
+            className="shape shape-1 iconTheme"
           >
             <g>
               <path
@@ -177,7 +178,7 @@ export const HomeSection = () => {
             height="45px"
             viewBox="0 0 190.408 190.407"
             xmlSpace="preserve"
-            className="shape shape-2"
+            className="shape shape-2 iconTheme"
           >
             <g>
               <path
@@ -221,7 +222,7 @@ export const HomeSection = () => {
             height="55px"
             viewBox="0 0 189.181 189.181"
             xmlSpace="preserve"
-            className="shape shape-3"
+            className="shape shape-3 iconTheme"
           >
             <g>
               <g>
@@ -330,7 +331,7 @@ export const HomeSection = () => {
             height="35px"
             viewBox="0 0 190.408 190.407"
             xmlSpace="preserve"
-            className="shape shape-5"
+            className="shape shape-5 iconTheme"
           >
             <g>
               <path
@@ -374,7 +375,7 @@ export const HomeSection = () => {
             height="40px"
             viewBox="0 0 189.181 189.181"
             xmlSpace="preserve"
-            className="shape shape-4"
+            className="shape shape-4 iconTheme"
           >
             <g>
               <g>

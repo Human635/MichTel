@@ -1,0 +1,35 @@
+html[data-theme="dark"] {
+  --button-text-color: #ffffff;
+  --button-background-color: #4e005c;
+  --button-border-color: #ba8fc2;
+
+  --title-text-color: #fff;
+
+  --text-text-color: #d5d5d5;
+
+  --icon-text-color: #d5d5d5;
+
+  --input-text-color: #ffffff;
+  --input-placeholder-text-color: #dddddd;
+
+  --background-color: #222;
+  --icon-color: #ba8fc2;
+}
+
+html[data-theme="light"] {
+  --button-text-color: #252525;
+  --button-background-color: #f9d4ff;
+  --button-border-color: #4e005c;
+
+  --title-text-color: #222;
+
+  --text-text-color: #293133;
+
+  --icon-text-color: #293133;
+
+  --input-text-color: #252525;
+  --input-placeholder-text-color: #a7a7a7;
+
+  --background-color: #e6e6fa;
+  --icon-color: #4e005c;
+}

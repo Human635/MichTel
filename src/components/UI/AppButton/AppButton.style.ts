@@ -13,8 +13,6 @@ export const ThemeAppButton = styled.button`
   transition: 200ms;
   border: none;
 
-  color: black;
-
   &:hover {
     background-color: royalblue;
     color: white;

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ThemeHeader = styled.header`
   margin: 0;
-  background-color: #fff;
   opacity: 0.95;
   display: flex;
   align-items: center;
@@ -71,7 +70,6 @@ export const ThemeToogleMain = styled.div`
 
 export const ThemeHomeSection = styled.section`
   padding: 70px 60px;
-  background-color: #e6e6fa;
   border-radius: 12px;
   height: 100%;
 
@@ -195,7 +193,6 @@ export const ThemeHomeSection = styled.section`
   }
 
   .main-heading {
-    color: hsl(249, 37%, 19%);
     font-size: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -206,7 +203,6 @@ export const ThemeHomeSection = styled.section`
   }
 
   .home-text {
-    color: hsl(240, 9%, 51%);
     margin-bottom: 40px;
     line-height: 1.6;
   }
@@ -415,6 +411,8 @@ export const ThemeMainSection = styled.section`
     gap: 10px;
   }
   h2 {
+    margin: 0;
+    margin-top: -50px;
     margin-left: 50px;
     font-size: 40px;
   }
@@ -687,3 +685,5 @@ export const ThemeMenuFavorites = styled.div`
     background: hsl(220, 13%, 95%);
   }
 `;
+
+export const ThemeLightDark = styled.div``;

@@ -9,16 +9,16 @@ export const PlacesSection = () => {
   console.log("DATA: ", data);
 
   return (
-    <ThemeMainSection className="product" id="menu">
-      <h2 className="section-title">Most popular places</h2>
+    <ThemeMainSection className="product boxBackExchange" id="menu">
+      <h2 className="section-title mainTitles ">Most popular places</h2>
 
-      <p className="section-text">
+      <p className="section-text secondaryText">
         There are a cuple of places which is popular among individuals
       </p>
 
       <div className="place-grid">
-        {isError && <h1>ПРОИЗОШЛА ОШИБКА</h1>}
-        {isLoading && <h1>ЗАГРУЗКА...</h1>}
+        {isError && <h1 className="mainTitles">ПРОИЗОШЛА ОШИБКА</h1>}
+        {isLoading && <h1 className="mainTitles">ЗАГРУЗКА...</h1>}
         {data &&
           data.map((places: any) => (
             <Card
