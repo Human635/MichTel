@@ -8,7 +8,7 @@ export const placesApi = createApi({
     prepareHeaders: (headers) => {
       headers.set(
         "X-RapidAPI-Key",
-        ""
+        "e63105d90amsh43a0ca1404c993bp19d9a8jsn92d47c11f9c0"
         //e63105d90amsh43a0ca1404c993bp19d9a8jsn92d47c11f9c0
       );
       headers.set("X-RapidAPI-Host", "nomad-list-cities.p.rapidapi.com");

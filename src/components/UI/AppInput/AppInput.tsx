@@ -6,6 +6,9 @@ type AppInputMainProps = {
   inputPlaceholder: string;
   name?: string;
   id?: string;
+  className?: string;
+  onKeyUp?: any;
+  onClick?: any;
 };
 
 export const AppInput = ({
@@ -13,6 +16,9 @@ export const AppInput = ({
   name,
   inputPlaceholder,
   type,
+  className,
+  onKeyUp,
+  onClick,
   ...props
 }: AppInputMainProps) => {
   return (

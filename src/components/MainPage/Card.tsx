@@ -1,21 +1,24 @@
 import React from "react";
 import { ThemeCard } from "./MainPage.style";
+import { ThemeModalItem } from "./MainPage.style";
 
 export interface TouristCardProps {
-  name: string;
-  cost_for_nomad_in_usd: number;
-  image: string;
+  name?: string;
+  cost_for_nomad_in_usd?: number;
+  image?: string;
 
-  region: string;
-  population: number;
-  air_quality_now: number;
-  country: string;
-  internet_speed: string;
-  safety_level: number;
-  humidity: string;
-  wheather_emoji: any;
-  wheather_icon: any;
-  temperatureC: string;
+  region?: string;
+  population?: number;
+  air_quality_now?: number;
+  country?: string;
+  internet_speed?: string;
+  safety_level?: number;
+  humidity?: string;
+  wheather_emoji?: any;
+  wheather_icon?: any;
+  temperatureC?: string;
+
+  onClick?: any;
 }
 
 export const Card = ({
@@ -33,9 +36,11 @@ export const Card = ({
   wheather_emoji,
   temperatureC,
   wheather_icon,
+
+  onClick,
 }: TouristCardProps) => {
   return (
-    <ThemeCard className="wrapper">
+    <ThemeCard className="wrapper" onClick={onClick}>
       <div className="container">
         {/* <div className="top">{image}</div> */}
         <img className="top" src={image} alt="Image" />

@@ -1,7 +1,12 @@
 import React from "react";
-import { ThemeHeaderSocial, ThemeSettingAbout, ThemeToogle } from "./SettingsStyles.style";
+import {
+  ThemeHeaderSocial,
+  ThemeSettingAbout,
+  ThemeToogle,
+} from "./SettingsStyles.style";
 import { Bio } from "./Bio/Bio";
 import { AppButton } from "../UI/AppButton/AppButton";
+import { ThemeExchange } from "../MainPage/light-dark";
 
 export const AboutSettings = () => {
   return (
@@ -49,9 +54,12 @@ export const AboutSettings = () => {
       </ThemeHeaderSocial>
       <Bio className="Bio" />
       <ThemeToogle className="dark-light">
-        <h3>Light-Dark <span>Theme Exchange</span></h3>
-        <input type="checkbox" id="toggle" />
-        <label htmlFor="toggle"></label>
+        <h3>
+          Light-Dark <span>Theme Exchange</span>
+        </h3>
+        <div>
+          <ThemeExchange />
+        </div>
       </ThemeToogle>
       <AppButton className="ReChange" type={() => {}} value="Редактировать" />
     </ThemeSettingAbout>

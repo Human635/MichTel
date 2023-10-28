@@ -194,6 +194,11 @@ export const ThemeForBtnStyle = styled.div`
 `;
 
 export const ThemeToogle = styled.div`
+  div {
+    position: absolute;
+    right: 35px;
+    top: 50px;
+  }
   input[type="checkbox"] {
     visibility: hidden;
     &:checked + label {
