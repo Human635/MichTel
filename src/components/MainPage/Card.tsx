@@ -1,6 +1,9 @@
+//@ts-nocheck
+import { useState } from "react";
 import React from "react";
-import { ThemeCard } from "./MainPage.style";
+import { ThemeCard, ThemeModal } from "./MainPage.style";
 import { ThemeModalItem } from "./MainPage.style";
+import Modal from "react-modal";
 
 export interface TouristCardProps {
   name?: string;
@@ -39,8 +42,73 @@ export const Card = ({
 
   onClick,
 }: TouristCardProps) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
   return (
-    <ThemeCard className="wrapper" onClick={onClick}>
+    <ThemeCard className="wrapper" onClick={openModal}>
+      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={() => {}}>
+        <ThemeModal class="center">
+          <div className="card green">
+            <div className="additional">
+              <div className="user-card">
+                <div className="points center">
+                  {cost_for_nomad_in_usd} $/ m
+                </div>
+                <img src={image} alt="Image" />
+              </div>
+              <div className="more-info">
+                <h1>{name}</h1>
+                <div className="coords">
+                  <span>Population</span>
+                  <span>{population} people</span>
+                </div>
+                <div className="coords">
+                  <span>Region</span>
+                  <span>
+                    {country}/ {region}
+                  </span>
+                </div>
+                <div className="stats">
+                  <div>
+                    <div className="title">Whether</div>
+                    <div className="value">
+                      {wheather_emoji}
+                      {temperatureC}°C
+                    </div>
+                  </div>
+                  <div>
+                    <div className="title">AQI</div>
+                    <div className="value">{air_quality_now}</div>
+                  </div>
+                  <div>
+                    <div className="title">Safety</div>
+                    <div className="value">{safety_level}/5</div>
+                  </div>
+                  <div>
+                    <div className="title">Internet</div>
+                    <div className="value">{internet_speed}mb/s</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="general">
+              <h1>{name}</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
+                volutpat mauris, at molestie lacus. Nam vestibulum sodales odio
+                ut pulvinar.
+              </p>
+            </div>
+          </div>
+        </ThemeModal>
+      </Modal>
       <div className="container">
         {/* <div className="top">{image}</div> */}
         <img className="top" src={image} alt="Image" />

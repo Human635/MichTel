@@ -1,41 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Card } from "./Card";
 import { ThemeMainSection } from "./MainPage.style";
-import { placesApi, useGetPlacesListQuery } from "../../store/api/placesApi";
-import { ThemeModalItem } from "./MainPage.style";
-import { ModalItem } from "./Modal";
+import { useGetPlacesListQuery } from "../../store/api/placesApi";
 
 export const PlacesSection = () => {
   const { data, isError, isLoading } = useGetPlacesListQuery(null);
 
   console.log("DATA: ", data);
-
-  const handleModalAfterClick = async (details: any) => {
-    const response = await fetch(details);
-    const placeDetails = await response.json();
-    return (
-      <ModalItem
-        image={placeDetails.image}
-        name={placeDetails.name}
-        cost_for_nomad_in_usd={placeDetails.cost_for_nomad_in_usd}
-        descriptionFromReview={placeDetails.descriptionFromReview}
-      />
-    );
-  };
-
-  useEffect(() => {
-    const handleClickDetails = async () => {
-      if (data) {
-        data.forEach(async (place: any) => {
-          const response = await fetch(place);
-          const placeDetails = await response.json();
-          handleModalAfterClick(placeDetails);
-        });
-      }
-    };
-
-    handleClickDetails();
-  }, [data]);
 
   return (
     <ThemeMainSection className="product boxBackExchange" id="menu">
@@ -65,7 +36,6 @@ export const PlacesSection = () => {
               wheather_emoji={place.weather_emoji}
               temperatureC={place.temperatureC}
               // weather_icon={place.weather_icon}
-              onClick={() => handleModalAfterClick(place)}
             />
           ))}
       </div>
